@@ -19,3 +19,14 @@ function downloadPDF() {
     const ticket = document.getElementById("ticket");
     html2pdf().from(ticket).save("Invitation_Ticket.pdf");
 }
+document.getElementById("imageInput").addEventListener("change", function () {
+    const file = this.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function () {
+        document.getElementById("ticketImage").src = reader.result;
+        document.getElementById("ticketImage").style.display = "block";
+    };
+
+    if (file) reader.readAsDataURL(file);
+});
