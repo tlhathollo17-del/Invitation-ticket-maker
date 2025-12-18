@@ -14,6 +14,7 @@
 
 <div class="form">
     <input id="eventName" placeholder="Event Name">
+    <input type="file" id="imageinput" accept="image/*">
     <input id="date" placeholder="Date">
     <input id="time" placeholder="Time">
     <input id="venue" placeholder="Venue">
@@ -21,6 +22,15 @@
 
     <button onclick="generateTicket()">Generate Ticket</button>
     <button onclick="downloadPDF()">Download PDF</button>
+</div>
+    
+<div id="ticket" class="ticket">
+    <img id="ticketImage" class="ticket-image">
+    <h2 id="tEvent"></h2>
+    <p class="center"><span id="tDate"></span></p>
+    <p class="center"><span id="tTime"></span></p>
+    <p class="center"><span id="tVenue"></span></p>
+    <p class="center"><em>Hosted by <span id="tHost"></span></em></p>
 </div>
 
 <div id="ticket" class="ticket">
